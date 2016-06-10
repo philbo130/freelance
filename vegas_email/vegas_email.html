@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style type="text/css">
+        /*//////////RESET STYLES//////////*/
+             body, #bodyTable, #bodycell{height:100%!important; margin:0; padding:0; width:100% !important;}
+            table{border-collapse:collapse;}
+            img, a img{border:0; outline:none; text-decoration:none;}
+            h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+            p{margin: 1em 0;}
+
+        /*////// CLIENT-SPECIFIC STYLES //////*/
+            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail/Outlook.com to display emails at full width. */
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} /* Force Hotmail/Outlook.com to display line heights normally. */
+            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up. */
+            #outlook a{padding:0;} /* Force Outlook 2007 and up to provide a "view in browser" message. */
+            img{-ms-interpolation-mode: bicubic;} /* Force IE to smoothly render resized images. */
+            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;} /* Prevent Windows- and Webkit-based mobile platforms from changing declared text sizes. */
+
+            /*////// GENERAL STYLES //////*/
+            .introductionHeading, .introductionContent, .callToActionContent, .callToActionButtonContent, .eventBlockMonth, .eventBlockDay, .eventContent, .ButtonContent, .footerContent{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+            h1, h2, h3{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+            h1, h1 a{color:#FFF200; font-size:44px; font-weight:100; line-height:115%; text-align:left;}
+            h2, h2 a{color:#666666; font-size:34px; font-weight:100; line-height:100%; text-align:left;}
+            h3, h3 a{color:#FFF200; font-size:30px; font-weight:100; line-height:115%; text-align:left;}
+
+            body, #bodyTable{background-color:#666666;}
+            #emailContainer{width:100%;}
+
+            #heroImageContainer{background-color:#F0F0F0;}
+
+            #introductionContainer{background-color:#F0F0F0; padding:40px;}
+            #introductionBlock{background-color:#BFBFBF;}
+            .introductionHeading{color:#666666; font-size:14px; font-weight:bold; line-height:150%; padding-left:40px;}
+            .introductionContent{color:#666666; font-size:18px; line-height:150%; padding-top:40px;}
+
+            #callToActionContainer{background-color:#FFF200; padding:40px;}
+            #callToActionBlock{background-color:#FFF200;}
+            .callToActionContent h3{color:#FFFFFF; text-align:center;}
+            .callToActionContent{color:#FFFFFF; font-size:16px; line-height:150%; padding-bottom:40px; text-align:center;}
+            .callToActionButton{background-color:#FFFFFF; border-radius:4px; box-shadow:0 5px 0 #FFE000;}
+            .callToActionButtonContent{padding-top:20px; padding-right:40px; padding-bottom:20px; padding-left:40px;}
+            .callToActionButtonContent, .callToActionButtonContent a{color:#FFF200; display:block; font-size:24px; font-weight:bold; line-height:100%; letter-spacing:-1px; text-align:center; text-decoration:none;}
+
+            #eventContainer{background-color:#F0F0F0; padding:40px;}
+            #eventBlock{background-color:#F0F0F0; border-top:1px solid #BFBFBF; border-bottom:1px solid #BFBFBF;}
+            #eventBlockCell{padding:40px;}
+            .eventBlockCalendar{background-color:#FFFFFF; border:1px solid #666666;}
+            .eventBlockHeading{padding-bottom:40px;}
+            .eventBlockMonth{background-color:#FFF200; color:#FFFFFF; font-size:18px; font-weight:bold; line-height:100%; padding:10px;}
+            .eventBlockDay{background-color:#FFFFFF; color:#666666; font-size:30px; font-weight:bold; line-height:100%; padding:15px;}
+            .eventContent{color:#666666; font-size:16px; line-height:125%; padding-left:20px;}
+
+            .eventButton{background-color:#FFF200; border-radius:4px; box-shadow:0 5px 0 #FFE000}
+            .buttonContent a{color:#666666; font-size:16px; font-weight:bold; line-height:100%; letter-spacing:-1px; padding:10px; text-align:center; text-decoration:none;}
+
+            #footerContainer{padding:40px;}
+            .footerContent{color:#AAAAAA; font-size:13px; line-height:150%; padding-bottom:40px;}
+            .footerContent a{color:#FFF200; text-decoration:none;}
+
+            /*////// MOBILE STYLES //////*/
+
+            /*
+                CSS selectors are written in attribute
+                selector format to prevent Yahoo Mail
+                from rendering media query styles on
+                desktop.
+            */
+
+            @media only screen and (max-width: 480px){
+                /*////// RESET STYLES //////*/
+                td[id="introductionContainer"], td[id="callToActionContainer"], td[id="eventContainer"], td[id="footerContainer"]{padding-right:10px !important; padding-left:10px !important;}
+                table[id="introductionBlock"], table[id="callToActionBlock"], table[id="eventBlock"], table[id="footerBlock"]{max-width:480px !important; width:100% !important;}
+                
+                /*////// CLIENT-SPECIFIC STYLES //////*/
+                body{width:100% !important; min-width:100% !important;} /* Force iOS Mail to render the email at full width. */
+                
+                /*////// GENERAL STYLES //////*/
+                h1{font-size:34px !important;}
+                h2{font-size:30px !important;}
+                h3{font-size:24px !important;}
+                
+                img[id="heroImage"]{height:auto !important; max-width:520px !important; width:100% !important;}
+                
+                td[class="introductionLogo"], td[class="introductionHeading"]{display:block !important;}
+                td[class="introductionHeading"]{padding:40px 0 0 0 !important;}
+                td[class="introductionContent"]{padding-top:20px !important;}
+                
+                td[class="callToActionContent"]{text-align:left !important;}
+                table[class="callToActionButton"]{width:100% !important;}
+                
+                td[id="eventBlockCell"]{padding-right:20px !important; padding-left:20px !important;}
+                table[class="eventBlockCalendar"]{width:100px !important;}
+                
+
+                td[class="footerContent"]{font-size:15px !important;}
+                td[class="footerContent"] a{display:block;}
+            }
+
+		</style>
+    </head>
+    <body>
+    	<center>
+    	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+    		<tr>
+    			<td align="center" valign="top" id="bodyCell">
+    				<table border="0" cellpadding="0" cellspacing="0" width="100%" id="emailContainer">
+    					
+    					<!-- Hero Image Container -->
+    					<tr>
+    						<td align="center" valign="top" id="heroImageContainer">
+    							<img src="images/vegas_hero.jpg" alt="Vegas at Night" height="300" width="520" id="heroImage" />
+    						</td>
+    					</tr>
+
+    					<!-- Intro Container -->
+    					<tr>
+    						<td align="center" valign="top" id="introductionContainer">
+        						<table border="0" cellpadding="0" cellspacing="0" width="520" id="introductionBlock">
+            						<tr>
+              						<td>
+                						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  						<tr>
+                    						<td align="left" valign="top" class="introductionLogo">
+                        					<a href="#" target="_blank" title="PearsonGoesVegas"><img src="images/vegas_sign.gif" alt="Vegas Sign" height="140" width="160" /></a>
+                    						</td>
+                    						<td align="left" valign="middle" class="introductionHeading"> Join us for 
+                        				<br/>
+                        				<h1>Pearson Goes Vegas</h1>
+		                            </td>
+			                        </tr>
+				                    </table>
+					                </td>
+						            </tr>
+						            <tr>
+              						<td align="left" valign="top" class="introductionContent">
+              						Vegas, baby, Vegas. Join the House of Pain alumni in Sin City. More details to come.
+                  				</td>
+            						</tr>
+        						</table>
+								</td>
+							</tr>
+
+							<!-- Call To Action Container -->
+    					<tr>
+    						<td align="center" valign="top" id="callToActionContainer">
+    							<table border="0" cellpadding="0" cellspacing="0" width="520" id="callToActionBlock">
+			            	<tr>
+			                <td align="center" valign="top" class="callToActionContent">
+			                    <h2>Register</h2>
+			                    <br />
+			                    Let us know if you plan to attend. Also, check out a really creepy photo of the Pearson house, leave a message for fellow alumni, and help us with the house of Pain trivia quiz. 
+			                </td>
+			            	</tr>
+			            	<tr>
+			                <td align="center" valign="top">
+			                    <table border="0" cellpadding="0" cellspacing="0" class="callToActionButton">
+			                        <tr>
+			                            <td align="center" valign="top" class="callToActionButtonContent">
+			                                <a href="#" target="_blank" title="Pearson Goes Vegas Website">I'm Coming!</a>
+			                            </td>
+			                        </tr>
+			                    </table>
+			                </td>
+			            	</tr>
+        					</table>
+    						</td>
+    					</tr>
+
+    					<!-- Event Container -->
+    					<tr>
+    						<td align="center" valign="top" id="eventContainer">
+    							<table border="0" cellpadding="0" cellspacing="0" width="600" id="eventBlock">
+            				<tr>
+                			<td align="center" valign="top" id="eventBlockCell">
+                    		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        	<tr>
+                            <td align="left" valign="top" class="eventBlockHeading">
+                               <h2>Save The Date</h2>
+                            </td>
+                        	</tr>
+                        	<tr>
+                           <td align="center" valign="top">
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                  <td align="center" valign="top">
+                                     <table border="0" cellpadding="0" cellspacing="0" width="110" class="eventBlockCalendar">
+                                        <tr>
+                                            <td align="center" valign="top" class="eventBlockMonth">
+                                              OCT
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" valign="top" class="eventBlockDay">
+                                            7-10
+                                          </td>
+                                        </tr>
+                                     </table>
+                                   </td>
+                                   <td align="left" valign="top" class="eventContent">
+                                      <h4>Jaunt</h4></a>
+                                      <br />
+                                      Make flight arrangements through Travelocity.
+                                     <!--    <tr> -->
+                                            <td align="center" valign="middle" class="buttonContent">
+                                            <a href="https://www.travelocity.com/Flights" target="_blank" title="travelocity" class="eventButton">Reserve</a>
+                                            </td>
+                                        <!-- </tr> -->
+                                  </td>
+                                   <td align="left" valign="top" class="eventContent">
+                                      <h4>Sleep</h4></a>
+                                      <br />
+                                      Reserve your room at the Cosmopolitan Hotel.
+                                       <!--  <tr>
+ -->                                            <td align="center" valign="middle" class="buttonContent">
+                                            <a href="https://www.cosmopolitanlasvegas.com/" target="_blank" title="reserve" class="eventButton">Reserve</a>
+                                            </td>
+                                  <!--       </tr> -->
+                                  </td>
+
+                                </tr>
+                               </table>
+                            </td>
+                        	</tr>
+                    		</table>
+                			</td>
+            				</tr>
+        					</table>
+    						</td>
+    					</tr>
+
+    					<!-- Footer Container -->
+    					<tr>
+    						<td align="center" valign="top" id="footerContainer">
+    							<table border="0" cellpadding="0" cellspacing="0" width="600" id="footerBlock">
+            				    <tr>
+                			     <td align="center" valign="top" class="footerContent">
+                    	           <strong>
+                    	           Add footer content here
+                    	           </strong>
+                			     </td>
+            				    </tr>
+            				    <tr>
+                			         <td align="center" valign="top" class="footerContent">
+                    	               &copy; 2016 Pauline Hilborn. &bull; <a href="http://philbo.design/wp" target="_blank"> http://philbo.design </a>&bull; New York City
+                    	               <br />
+                    	               <br />
+                    	               <a href="#" target="_blank"></a>
+                			         </td>
+            				    </tr>
+        					   </table>
+    						</td>
+    					</tr>
+    				</table>
+    			</td>
+    		</tr>
+    	</table>
+    	</center>
+    </body>
+
+ </html>
