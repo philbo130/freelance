@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html ng-app="PearsonVegas">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <title>Pearson Goes Vegas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300 |Grand+Hotel' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/scripts.js"></script>
+<script>
+
+<!-- JQUERY FOR SLIDING NAVIGATION -->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!-- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV-->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1250);
+           return false;
+         });
+      }
+    }
+  });
+});
+
+</script>
+
+</head>
+
+<body>	
+<!-- Header Start -->
+	<header id="header">
+	<div class="content">
+	<div id="logo"> <a href=""></a></div>
+		<nav id="nav">
+			<ul>
+				<li><a href="#slide1" class="active" title="Next Section" >WELCOME</a></li>
+				<li><a href="#slide2" title="Next Section">DETAILS</a></li>
+				<li><a href="#slide3" title="Next Section">HOUSE of PAIN</a></li>
+				<li><a href="#slide4" title="Next Section">ATTENDEES</a></li>
+			</ul>
+		</nav>
+	</div>
+	</header>
+	<!-- Header End -->
+ 
+ 	<!-- Slider Start -->
+	<div id="slide1">
+		<div class="content">
+            <img src="img/vegas_sign.gif" id="sign">
+            <table id="dateBlock">
+          		<tr>
+            		<td id="date"><h2>October 7 - 10, 2016</h2></td>
+            	</tr>
+            	<tr>
+            		<td id="attendButton"><a href="#slide4" title="Next Section"><h2>I will attend</h2></a></td>
+            	</tr>
+            </table>
+		</div> 
+		<div id="countdownBar">
+			<table id="countdown">
+            	<tr>
+            	<td><h3>DAYS</h3></td>
+            	<td><h3>HOURS</h3></td>
+            	<td><h3>MINUTES</h3></td>
+            	<td><h3>SECONDS</h3></td>  		
+            	</tr>
+            	<tr class="clock">
+            	<td id="days">#</td>
+            	<td id="hours">#</td>
+            	<td id="minutes">#</td>
+            	<td id="seconds">#</td>  		
+            	</tr>
+        	</table>
+        </div>
+    </div> 
+    <div id="slide2">
+		<div class="content" >
+            <div class="details_container">			
+			</div> 
+		</div> 
+    </div>
+    <div id="slide3">
+		<div class="content">
+			<div class="quotes_container">
+		    <h3 class="quotes">“April stools, Mr. Fo Fo’s, and the Ferndale police... many fond memories of a special haunted house.”</h3>
+		  	<h3 class="author_name">Joe Hessling</h3>
+			</div> 
+		</div> 
+    </div> 	 	
+	<div id="slide4">
+<!-- 		<div class="content"> -->
+			<div class="signup_container">
+			<h1>Sign Up</h1>
+				<form ng-submit="createCtrl.create()"ng-controller="CreateAttendeeController as createCtrl">
+            	<input ng-model="createCtrl.name" type="text" placeholder="NAME" /><br/>
+            	<input ng-model="createCtrl.comment" type="text" placeholder="COMMENT" /><br/>
+            	<button>I'm Coming!</button>
+            	</form>
+            </div>
+           	<br />
+            <h1>Attendees</h1>
+            <div class="attendees_container">
+            	<ul ng-controller="AttendeesListController as attendeesCtrl">
+            		<li class="attendees" ng-repeat="attendee in attendeesCtrl.attendees"><strong>{{attendee.name}}</strong> - {{attendee.comment}}</li>
+            	</ul>
+			</div> 
+		</div> 		
+			<div id="copyright">
+			&copy; 2016 Pauline Hilborn &bull;<a href="http://philbo.design/wp" target="_blank"> http://philbo.design</a> &bull; New York City 
+			</div> 
+		</div> 		
+    </div> 
+
+
+</body>
+</html>
