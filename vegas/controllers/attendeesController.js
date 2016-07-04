@@ -2,11 +2,22 @@ var express = require('express'),
     router  = express.Router(),
 	Attendee = require('../models/attendees.js');
 
-//get all attendees
+//index route for attendees
 router.get('/', function(req, res){	
-	Attendee.find({}, function(err, attendees){ //to get all attendees
-		res.json(attendees); // to send out attendees
+	//to get all attendees from mongo
+	Attendee.find({}, function(err, attendees){ 
+		//once data returns from mongo, send it out as JSON
+		res.json(attendees); 
 	});
+});
+
+router.post('/', function(req, res){
+	// console.log(req.body);
+	// res.send('hi');
+	var newAttendee = new Attendee(req.body);
+	newAttendee.save(function(err, data){
+		res.send(data);
+	})
 });
 
 module.exports = router;

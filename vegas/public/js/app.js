@@ -20,9 +20,24 @@
 	)
  }]);
 
- app.controller('CreateAttendeeController', ['$http', function($http){
+ app.controller('CreateAttendeeController', ['$scope', '$http', function($scope, $http){
+ 	var controller = this;
  	this.create = function(){
- 		console.log(this);
+ 		$http({
+ 			method: 'POST',
+ 			url: '/attendees',
+ 			data: this
+ 		}).then(
+ 		//success
+ 		function(response){
+ 			console.log(response);
+ 			$scope.$$nextSibling.attendeesCtrl.attendees.push(response.data);
+ 			controller.name = ' ';
+ 			controller.comment = ' ';
+ 		},
+ 		//fail
+ 		function(){
+ 			console.log(err)
+ 		})
  	}
-
- }])
+ }]);
