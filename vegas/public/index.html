@@ -2,14 +2,16 @@
 <!DOCTYPE html>
 <html ng-app="PearsonVegas">
   <head>
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pearson Goes Vegas</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
-    <script src="js/app.js" charset="utf-8"></script>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="shortcut icon" href="img/favicon.ico" />
+  	<link href='https://fonts.googleapis.com/css?family=Roboto:300 |Grand+Hotel' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css"/>
-	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300 |Grand+Hotel' rel='stylesheet' type='text/css'>
+    <title>Pearson Goes Vegas</title>  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>   
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>    
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<style>#map {width: 100%; height: 350px;}</style>
 
 	<script>
 
@@ -36,7 +38,7 @@
 	  });
 	});
 
-</script>
+	</script>
 </head>
 
 <body>	
@@ -45,11 +47,15 @@
 		<nav id="nav">
 			<ul>
 				<li><a href="#slide1" class="active" title="Next Section" >WELCOME</a></li>
-				<li><a href="#slide2" title="Next Section">DETAILS</a></li>
+				<li><a href="#slide2" title="Next Section">SCHEDULE</a></li>
 				<li><a href="#slide3" title="Next Section">HOUSE of PAIN</a></li>
 				<li><a href="#slide4" title="Next Section">ATTENDEES</a></li>
 			</ul>
 		</nav>
+
+		<button class="hamburger">&#9776;</button>
+  		<button class="cross">&#735;</button>
+
 	</header>
 	<!-- Header End -->
  
@@ -86,7 +92,53 @@
 
     <div id="slide2">
 		<div class="content" >
-            <div class="details_container">			
+            <div class="details_container">	
+            <h1 class="yellow_h1">Schedule of Events</h1>
+           	<table id="eventTable">
+      		    <thead>
+          			<tr>
+			           <th id="dateCol" scope="col">DAY</th>
+			           <th id="eventCol" scope="col">EVENT</th>
+			           <th id="locationCol"scope="col">LOCATION</th>
+			        </tr>
+        		</thead>
+	      		<tbody id="events">
+			        <tr>
+			           <th scope="row">Thursday</th>
+			           <td><a href="https://www.bellagio.com/en/casino/poker.html" class="link_white">Poker at the Bellagio</a></td>
+			           <td>3600 Las Vegas Blvd</td>
+			        </tr>
+			        <tr>
+			           <th scope="row">Friday</th>
+			           <td>Dinner at &eacute by Jos&eacute Andr&eacuteas</td>
+			           <td>3708 S Las Vegas Blvd</td>
+			        </tr>
+			        <tr>
+			           <th scope="row"></th>
+			           <td>Karoke</td>
+			           <td>TBD</td>
+			        </tr>
+			        <tr>
+			           <th scope="row">Saturday</th>
+			           <td>Racecars, Shooting Range</td>
+			           <td>TBD</td>
+			        </tr>
+			        <tr>
+			           <th scope="row"></th>
+			           <td><a href="http://xslasvegas.com/" class="link_white">XS Nightclub</a></td>
+			           <td>3131 S Las Vegas Blvd</td>
+			        </tr>
+			        <tr>
+			           <th scope="row">Sunday</th>
+			           <td><a href="http://www.venetian.com/casino/race-and-sports-book.html" class="link_white">Football at the Venetian Sports Book</a></td>
+			           <td>The Grand Canal Shoppes</td>
+			        </tr>
+	        	</tbody>
+	    	</table>
+	    	 <div id="map"></div>
+			    <script async defer
+			        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABppnExWx3UsVRhrCw1k4dkmKf8Ew2cz0&callback=initMap">
+			    </script>
 			</div> 
 		</div> 
     </div>
@@ -104,7 +156,7 @@
 			<form ng-submit="createCtrl.create()"ng-controller="CreateAttendeeController as createCtrl">
            		<input ng-model="createCtrl.name" type="text" placeholder="Name" /><br/>
             	<input ng-model="createCtrl.comment" type="text" placeholder="Comment" /><br/>
-            	<button>I'm Coming!</button>
+            	<button id="signUp">I'm Coming!</button>
         	</form>
         </div>
         <br />

@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
 }
 
 h1 {
@@ -16,9 +17,17 @@ h1 {
 	margin: .5em;
 }
 
+.yellow_h1 {
+	font-family: 'Grand Hotel', cursive;
+	font-size: 2em;
+	color: #fff200;
+	font-weight: bolder;
+	text-align: center;
+	margin: .5em;
+}
 h2 {
 	font-size: 1.5em;
-	font-weight: lighter;
+	font-weight:lighter;
 	text-align: center;
 	margin: 0;
 	padding: 0;
@@ -33,16 +42,10 @@ h3 {
 	position: relative;
 }
 
-/*.center { margin: 0 auto; }
-.content{ margin: 0 auto; width: 90%; }
-.clear { clear: both; }
-a.lpanel { float: left; color: #e1e1e1; font-size: 1.5em; text-decoration: none; margin: 7px 11px; }
-a.rpanel { float: right; color: #e1e1e1;  font-size: 1.5em; text-decoration: none; margin: 7px 11px; }
-
-a.lpanel:hover{ color: #fff; }
-a.rpanel:hover{ color: #fff; }*/
-
-
+.content{ 
+	margin: 0 auto; 
+	width: 90%; 
+}
 
 /*Header and Navigation*/
 
@@ -52,6 +55,10 @@ a.rpanel:hover{ color: #fff; }*/
 	height: 4em; 	
 	position: fixed;
 	margin-top: 0;
+}
+
+.hamburger, .cross {
+	display: none;
 }
 
 #nav {float: right; margin-top: 1em; }
@@ -71,22 +78,12 @@ a.rpanel:hover{ color: #fff; }*/
 #nav li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
 #nav li a:hover { color: #fff; opacity:1;  }
 
-/*Details and Some Elements*/
+/* General Slider Styling*/
 
-.quotes {   
-   	font-weight: lighter;
-   	font-size: 3em;
-  	text-align: left;
-  	margin: 1em auto;
+#slide1, #slide2{ 
+	width: 100%; 
 }
-   
- .author_name { margin: 2em 0 0 2em; color: #fff200; font-size: 3em; }  
- .quotes_container, .details_container { width: 90vh; margin: 0 auto; }
- .content{ margin: 0 auto; width: 90%; }
 
-/* SLIDER STYLING*/
-
-#slide1, #slide2{ width: 100%; }
 #slide1{
 	background:url('../img/vegas.jpg') 100% 0 no-repeat fixed;
 	height: 100vh;
@@ -104,9 +101,9 @@ a.rpanel:hover{ color: #fff; }*/
 }
 
 table[id="dateBlock"] {
-  max-width: 20%;
-  margin: -250px auto;
-  margin-right: 10em;
+	max-width: 20%;
+  	margin: -250px auto;
+  	margin-right: 10em;
 }
 
 td[id="date"] {
@@ -160,8 +157,45 @@ table[id="countdown"]{
 	height: 100vh;
 	margin: 0 auto;
 	overflow: hidden;
-	padding: 10em 0;
+	padding: 5em 0;
 }
+
+.link_white {
+	color: #fff;
+}
+
+table[id="eventTable"]{
+  width: 100%;
+  margin: 5px auto;
+}
+
+thead th {
+  color: #fff200;
+  font-weight: lighter;
+}
+
+tbody[id="events"] {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: lighter;
+  padding: .3em;
+}
+
+#dateCol {
+	width: 20%;
+	font-size: 1.5em;
+}
+
+#eventCol {
+	width: 45%;
+	font-size: 1.5em;
+}
+
+#locationCol {
+	width: 35%;
+	font-size: 1.5em;
+}
+
 
 /*Slide 3*/
 
@@ -172,6 +206,19 @@ table[id="countdown"]{
 	padding: 10em 0 0 0;	
 	background-size: cover;
 }
+
+.quotes {   
+   	font-weight: lighter;
+   	font-family:'Roboto', sans-serif ;
+   	font-size: 3em;
+  	text-align: left;
+  	margin: 1em auto;
+}
+   
+ .author_name { margin: 2em 0 0 2em; color: #fff200; font-size: 3em; }  
+ .quotes_container, .details_container { width: 90vh; margin: 0 auto; }
+
+/*Slide 4*/
 
 #slide4 {
 	background-color: #fff200;
@@ -197,7 +244,7 @@ input {
 	border-radius: 4px;
 }
 
-button {
+#signUp {
 	width: 35%;
 	font-size: 1em; 
 	background-color: #bbb;
