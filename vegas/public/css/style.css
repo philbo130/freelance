@@ -60,7 +60,7 @@ h4 {
 	margin-top: 0;
 }
 
-.hamburger, .cross {
+.hamburger, .cross, .menu {
 	display: none;
 }
 
@@ -87,7 +87,7 @@ h4 {
 	width: 100%; 
 }
 
-/*Slide1*/
+/*//////////////Slider1 Landing Page //////////////*/
 
 #slide1{
 	background:url('../img/vegas.jpg') 100% 0 no-repeat fixed;
@@ -157,7 +157,7 @@ table[id="countdown"]{
 	width: 10em;
 }
 
-/*Slide 2*/
+/*/////////////Slider 2 Schedule of Events////////////*/
 
 #slide2 {
 	background-color: #000;
@@ -167,7 +167,7 @@ table[id="countdown"]{
 	padding: 5em 0;
 }
 
-.link_white {
+.white {
 	color: #fff;
 }
 
@@ -207,7 +207,6 @@ tbody[id="events"] {
 	font-size: 1.25em;
 }
 
-
 /*Slide 3*/
 
 #slide3 {
@@ -233,10 +232,6 @@ tbody[id="events"] {
     border-radius:5px;
 }
 
-#quiz {
-/*    display:none;*/
-}
-
 p, .answers {
    	font-size: 1.5em;
 }
@@ -260,10 +255,10 @@ p, .answers {
     color: #525252;
 }
 
-/*.button a {
+.button a {
     text-decoration: none;
     color: black;
-}*/
+}
 
 ul {
     list-style-type: none;
@@ -335,8 +330,85 @@ form {
 	overflow: auto;
 }
 
-/*Footer*/
+/*//////////////////Footer////////////////*/
 #copyright {
 	margin: 2em 30%;
 	color: #bbb;
+}
+
+/*//////////// MEDIA QUERY FOR TABLET ///////////////*/
+
+@media screen and (max-width: 800px){
+	#nav {
+		display:none;
+	}
+
+	.hamburger, .cross, .menu {
+		display: block;
+		position: fixed;
+	}
+/*
+	header{
+		width:100%; 
+		background:#000000; 
+		height:50px; 
+		line-height:50px;
+	}*/
+
+	.hamburger{
+	  	background:none;
+	  	position:absolute;
+	  	top:0;
+	  	right:0;
+	  	line-height:45px;
+	  	padding:0px 15px 0px 15px;
+	  	color:#fff;
+	  	border:0;
+	  	font-size:1.4em;
+	  	font-weight:bold;
+	  	cursor:pointer;
+	  	outline:none;
+	  	z-index:10000000000000;
+	}
+
+	.cross{
+	  	background:none;
+	  	position:absolute;
+	  	top:0px;
+	  	right:0;
+	  	padding:0px 15px 0px 15px;
+	  	color:#fff;
+	  	border:0;
+	  	font-size:3em;
+	  	line-height:65px;
+	  	font-weight:bold;
+	  	cursor:pointer;
+	  	outline:none;
+	  	z-index:10000000000000;
+	}
+	.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#000000;  position:absolute; text-align:center;}
+	.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+	.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+	.menu li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+	.menu ul li a { text-decoration:none;  margin: 0px; color:#fff;}
+	.menu ul li a:hover {  color: #fff; text-decoration:none;}
+	.menu a{text-decoration:none; color:white;}
+	.menu a:hover{text-decoration:none; color:white;}
+
+	#sign {
+		width: 100%;
+		margin: 4em auto;
+	}
+
+	table[id="dateBlock"] {
+		max-width: 50%;
+  		margin: 0 auto;
+	}
+}
+
+/*//////////// MEDIA QUERY FOR IPHONE ///////////////*/
+
+@media only screen and (max-width: 320px){
+
+
 }
