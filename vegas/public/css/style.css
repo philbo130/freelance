@@ -1,9 +1,8 @@
 /*Pearson in Vegas General Styling*/
 
-body {
+* {
 	margin: 0;
 	padding: 0;
-	width: 100%;
 	font-family: 'Roboto', sans-serif;
 	font-weight: lighter;
 }
@@ -19,35 +18,31 @@ h1 {
 }
 
 h2 {
-	margin: 0;
-	padding: 0;
 	font-family: 'Grand Hotel', cursive;
 	font-size: 2em;
 	font-weight: bolder;
 	text-align: center;
 	margin: .5em;
 }
-.yellow {
-	color: #fff200;
-}
-.grey {
-	color: #5a5a5a;
-}
 
 h3 {
 	font-size: 1.5em;
 	font-weight:lighter;
 	text-align: center;
-	margin: 0;
-	padding: 0;
 }
 
 h4 {
 	font-size: 1.25em;
 	font-weight:lighter;
 	text-align: center;
-	margin: 0;
-	padding: 0;
+}
+
+.yellow {
+	color: #fff200;
+}
+
+.grey {
+	color: #5a5a5a;
 }
 
 /*Header and Navigation*/
@@ -57,7 +52,6 @@ h4 {
 	background: url('../img/header-bg.png'); 
 	height: 4em; 	
 	position: fixed;
-	margin-top: 0;
 }
 
 .hamburger, .cross, .menu {
@@ -77,23 +71,35 @@ h4 {
 	padding-left: 0;
 }
 
-#nav li a { color: #fff; opacity:0.6; font-size: 1em; text-decoration: none;}
-#nav li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
-#nav li a:hover { color: #fff; opacity:1;  }
+#nav li a { 
+	color: #fff; 
+	opacity:0.6; 
+	font-size: 1em; 
+	text-decoration: none;
+}
+
+#nav li a.active { 
+	color: #fff; 
+	opacity:1; 
+	border-bottom: 2px solid #fff;
+}
+
+#nav li a:hover { 
+	color: #fff; 
+	opacity:1;  
+}
 
 /* General Slider Styling*/
 
-#slide1, #slide2, #slide3, #slide4{ 
+#slide1, #slide2, #slide3, #slide4 { 
 	width: 100%; 
+	height: 100vh;
 }
 
 /*//////////////Slider1 Landing Page //////////////*/
 
 #slide1{
 	background:url('../img/vegas.jpg') 100% 0 no-repeat fixed;
-	height: 100vh;
-	margin: 0;
-	padding:0;
 	background-size: cover;
 }
 
@@ -149,7 +155,6 @@ table[id="countdown"]{
    	font-weight: bold;
    	text-align: center;
    	margin: 5px 0;
-	padding: 0;
 	position: relative;
 }
 
@@ -161,8 +166,6 @@ table[id="countdown"]{
 
 #slide2 {
 	background-color: #000;
-	height: 100vh;
-	margin: 0 auto;
 	overflow: hidden;
 	padding: 5em 0;
 }
@@ -177,7 +180,7 @@ table[id="countdown"]{
 
 table[id="eventTable"]{
   width: 100%;
-  margin: 5px auto;
+  margin: 2em auto;
 }
 
 thead th {
@@ -207,13 +210,12 @@ tbody[id="events"] {
 	font-size: 1.25em;
 }
 
-/*Slide 3*/
+/*/////////////Slider 3 Quiz////////////*/
 
 #slide3 {
 	background: url(../img/pearson.jpg) 50% 0 no-repeat fixed;
 	color: #fff;
-	height: 100vh;
-	padding: 10em 0 0 0;	
+	padding: 4em 0;	
 	background-size: cover;
 }
 
@@ -262,8 +264,7 @@ p, .answers {
 
 ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    margin: 1em;
 }
 
 #prev {
@@ -272,16 +273,17 @@ ul {
 
 #start {
     display:none;
-    width: 90px;
+    width: 7em;
+    padding: .5em;
 }
 
-/*Slide 4*/
+/*/////////////Slider 4 Signup////////////*/
 
 #slide4 {
 	background-color: #fff200;
 	color: #333333;
 	height: 85vh;
-	padding: 5em 0;
+	padding: 4em 0;
 }
 
 form {
@@ -345,15 +347,7 @@ form {
 
 	.hamburger, .cross, .menu {
 		display: block;
-		position: fixed;
 	}
-/*
-	header{
-		width:100%; 
-		background:#000000; 
-		height:50px; 
-		line-height:50px;
-	}*/
 
 	.hamburger{
 	  	background:none;
@@ -384,7 +378,7 @@ form {
 	  	font-weight:bold;
 	  	cursor:pointer;
 	  	outline:none;
-	  	z-index:10000000000000;
+	  	z-index:2;
 	}
 	.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#000000;  position:absolute; text-align:center;}
 	.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
@@ -402,13 +396,103 @@ form {
 
 	table[id="dateBlock"] {
 		max-width: 50%;
-  		margin: 0 auto;
+  		margin:0 auto;
 	}
-}
 
+
+	table[id="countdown"]{
+	  width: 80%;
+	}
+
+	.event_container { 
+		width: 90%; margin: 0 auto; 
+	}
+
+	form {
+		margin: .5em 7em;	
+	}
+
+	.attendees_container { 
+		height: 40vh;
+		width: 80%;
+		margin: .5em auto; 
+	}
+
+	#copyright {
+		margin: 2em 20%;
+		color: #bbb;
+	}
+
+}
 /*//////////// MEDIA QUERY FOR IPHONE ///////////////*/
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 375px){
 
+table[id="dateBlock"] {
+		max-width: 100%;
+  		margin:0 auto;
+	}
+
+	h1 {
+	   	font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.75em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: .9em;
+	}
+
+	table[id="countdown"]{
+	  width: 100%;
+	}
+
+	table[id="eventTable"]{
+	  width: 100%;
+	  margin: 1em auto;
+	}
+
+	tbody[id="events"] {
+	  font-size: .75em;
+	  padding: .5em;
+	  text-align: left;
+	}
+
+	#dateCol, #eventCol, #locationCol  {
+		font-size: .8em;
+	}
+
+	.quiz_container { 
+		width: 80%;
+	    padding: 1.5em;
+	}
+	#slide4 {
+		height: 100vh;
+	}
+
+	p, .answers {
+	   	font-size: 1em;
+	}
+
+	form {
+		margin: .5em 2em;	
+	}
+
+	.attendees_container { 
+		width: 90%;
+		font-size: .8em;
+	}
+
+	#copyright {
+		text-align: center;
+		margin: 2em 10%;
+		color: #bbb;
+	}
 
 }

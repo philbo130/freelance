@@ -70,21 +70,21 @@ initializeClock(deadline);
     choices: ["Holly Golightly", "Holly Madison", "Holly Avurnin", "Holly Wood"],
     correctAnswer: 2
   }, {
-    question: "Who relieved himself on the entertainment center?",
-    choices: ["Marc Vanderkeere", "Brad Pitser", "Alex Hawkins","Dave Posch"],
+    question: "Which resident relieved himself on the entertainment center?",
+    choices: ["Marc Vanderkeere", "Brad Pitser", "Alex Hawkins","Joe Hessling"],
     correctAnswer: 2
   }, {
     question: "Whose girlfriend exclaimed, <q>Oh! I get it! You make words!</q> while observing a game of Scrabble?",
-    choices: ["Brad Pitser", "Dave Posch","Alex Hawkins", "Brad Hilborn"],
+    choices: ["Joe Kelleher", "Dave Posch","Kegger", "Mike Vanderkeere"],
     correctAnswer: 1
   }, {
     question: "Bonus question - What was her occupation?",
-    choices: ["Etymologist", "Waitress", "Hair Stylist", "Stripper"],
+    choices: ["Etymologist", "Waitress", "Lawyer", "Stripper"],
     correctAnswer: 3
   }, {
-    question: "What is 1 + 1?",
-    choices: [1, 2, 3, 4],
-    correctAnswer: 1
+    question: "Who was the winner of the April Stools contest?",
+    choices: ["Brad Pitser", "Jason Pitser", "Brad Hilborn", "Alex Hawkins"],
+    correctAnswer: 0
   }];
   
   var questionCounter = 0; //Tracks question number
